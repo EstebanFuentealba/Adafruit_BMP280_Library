@@ -414,12 +414,12 @@ Adafruit_Sensor *Adafruit_BMP280::getPressureSensor(void) {
 
 /**************************************************************************/
 /*!
-    @brief  Gets the sensor_t data for the BMP280's temperature sensor
+    @brief  Gets the sensor_adafruit_t data for the BMP280's temperature sensor
 */
 /**************************************************************************/
-void Adafruit_BMP280_Temp::getSensor(sensor_t *sensor) {
-  /* Clear the sensor_t object */
-  memset(sensor, 0, sizeof(sensor_t));
+void Adafruit_BMP280_Temp::getSensor(sensor_adafruit_t *sensor) {
+  /* Clear the sensor_adafruit_t object */
+  memset(sensor, 0, sizeof(sensor_adafruit_t));
 
   /* Insert the sensor name in the fixed length char array */
   strncpy(sensor->name, "BMP280", sizeof(sensor->name) - 1);
@@ -454,7 +454,7 @@ bool Adafruit_BMP280_Temp::getEvent(sensors_event_t *event) {
 
 /**************************************************************************/
 /*!
-    @brief  Gets the sensor_t data for the BMP280's pressure sensor
+    @brief  Gets the sensor_adafruit_t data for the BMP280's pressure sensor
 */
 /**************************************************************************/
 void Adafruit_BMP280_Pressure::getSensor(sensor_t *sensor) {
