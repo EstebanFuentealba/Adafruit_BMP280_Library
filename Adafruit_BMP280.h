@@ -91,7 +91,7 @@ public:
       @param parent A pointer to the BMP280 class */
   Adafruit_BMP280_Temp(Adafruit_BMP280 *parent) { _theBMP280 = parent; }
   bool getEvent(sensors_event_t *);
-  void getSensor(sensor_t *);
+  void getSensor(sensor_adafruit_t *);
 
 private:
   int _sensorID = 280;
@@ -105,7 +105,7 @@ public:
       @param parent A pointer to the BMP280 class */
   Adafruit_BMP280_Pressure(Adafruit_BMP280 *parent) { _theBMP280 = parent; }
   bool getEvent(sensors_event_t *);
-  void getSensor(sensor_t *);
+  void getSensor(sensor_adafruit_t *);
 
 private:
   int _sensorID = 0;
